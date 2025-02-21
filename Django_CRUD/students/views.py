@@ -1,14 +1,7 @@
-from django.shortcuts import render,redirect,get_object_or_404
-from students.models import Students
-from students.forms import StudentsForm
-
-# Create your views here.
-
 from django.shortcuts import render, redirect
 from students.models import Students
 from students.forms import StudentsForm
 
-# Create your views here.
 
 def student(request):
     if request.method == 'POST':
@@ -47,10 +40,6 @@ def update(request, id):
             return redirect('/show')
     return render(request, 'edit.html', {'student': student})
 
-
-# views.py
-from django.shortcuts import render, redirect
-from students.models import Students
 
 def delete(request, id):
     try:

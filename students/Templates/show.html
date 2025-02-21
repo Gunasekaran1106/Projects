@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Student Records</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.s_id }}</td>
+                <td>{{ student.s_name }}</td>
+                <td>{{ student.s_mail }}</td>
+                <td>{{ student.s_contact }}</td>
+                <td>
+                    <a href="/edit/{{ student.s_id }}">Edit</a>
+                    <a href="/delete/{{ student.s_id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/student/">Add New Student</a>
+</body>
+    
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+    
+<body>
+    <h1>Add Student</h1>
+    <table>
+        <form action="/student/" method="post">
+            {% csrf_token %}
+
+            <br>
+            <label for="id_s_id">Student ID:</label>
+            <br>
+            <input type="number" id="id_s_id" name="s_id" required>
+            <br>
+            <label for="id_s_name">Student Name:</label>
+            <br>
+            <input type="text" id="id_s_name" name="s_name" required>
+            <br>
+            <label for="id_s_mail">Student Mail:</label>
+            <br>
+            <input type="email" id="id_s_mail" name="s_mail" required>
+            <br>
+            <label for="id_s_contact">Student Contact:</label>
+            <br>
+            <input type="text" id="id_s_contact" name="s_contact" maxlength="10" required>
+            <br>
+            <br>
+            <button type="submit">Add Student</button>
+            <br>
+        </form>
+        <br>
+        <a href="/show/">View All Students</a>
+    </table>
+    
+</body>
+     
+
+</html>

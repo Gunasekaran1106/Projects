@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form> 
+        <table>
+            <tr>
+                <td><label for="first-name">First Name:</label></td>
+                <td><input type="text" id="first-name" name="first-name" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name:</label></td>
+                <td><input type="text" id="last-name" name="last-name" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td>
+                    <select id="day" name="day" required>
+                        <option value="" disabled selected>Day</option>
+                    </select>
+                    <select id="month" name="month" required>
+                        <option value="" disabled selected>Month</option>
+                        <!-- Add month options -->
+                    </select>
+                    <select id="year" name="year" required>
+                        <option value="" disabled selected>Year</option>
+                        <!-- Add year options -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email ID:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile Number:</label></td>
+                <td><input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10 digit number" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="3" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td><label for="pincode">Pin Code:</label></td>
+                <td><input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td>
+                    <select id="country" name="country" required>
+                        <option value="India">India</option>
+                        <!-- Add more country options if needed -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Hobbies:</label></td>
+                <td>
+                    <input type="checkbox" id="drawing" name="hobbies[]" value="Drawing">
+                    <label for="drawing">Drawing</label>
+                    <input type="checkbox" id="singing" name="hobbies[]" value="Singing">
+                    <label for="singing">Singing</label>
+                    <input type="checkbox" id="dancing" name="hobbies[]" value="Dancing">
+                    <label for="dancing">Dancing</label>
+                    <input type="checkbox" id="sketching" name="hobbies[]" value="Sketching">
+                    <label for="sketching">Sketching</label>
+                    <input type="checkbox" id="others" name="hobbies[]" value="Others">
+                    <label for="others">Others</label>
+                </td>
+            </tr>
+        </table>
+        
+        <h3>Qualification</h3>
+        <table border="1">
+            <tr>
+                <th>S.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board1" maxlength="10" required></td>
+                <td><input type="number" name="percentage1" step="0.01" required></td>
+                <td><input type="number" name="year1" maxlength="4" required></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board2" maxlength="10" required></td>
+                <td><input type="number" name="percentage2" step="0.01" required></td>
+                <td><input type="number" name="year2" maxlength="4" required></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board3" maxlength="10" required></td>
+                <td><input type="number" name="percentage3" step="0.01" required></td>
+                <td><input type="number" name="year3" maxlength="4" required></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board4" maxlength="10" required></td>
+                <td><input type="number" name="percentage4" step="0.01" required></td>
+                <td><input type="number" name="year4" maxlength="4" required></td>
+            </tr>
+        </table><br>
+
+        <label>Courses Applied For:</label><br>
+        <input type="checkbox" id="php" name="courses[]" value="PHP">
+        <label for="php">PHP</label>
+        <input type="checkbox" id="python" name="courses[]" value="Python">
+        <label for="python">Python</label>
+        <input type="checkbox" id="java" name="courses[]" value="Java">
+        <label for="java">Java</label>
+        <input type="checkbox" id="digital-marketing" name="courses[]" value="Digital Marketing">
+        <label for="digital-marketing">Digital Marketing</label><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
+

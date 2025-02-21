@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template Design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainpage{
+            background-color: beige;
+        }
+
+        nav{
+            background-color: aliceblue;
+            padding: 10px 20px;
+            display: flex;
+        }
+        .navbar ul{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            align-items: center;
+        }
+
+        .navbar li{
+            position: relative;
+        }
+        .navbar li a{
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            padding: 0px 20px;
+        }
+
+        .navbar h3{
+            padding-right: 30px;
+            padding-left: 10px;
+        }
+
+        .searchbox{
+            position: absolute;
+            right: 0;
+            padding-right:20px;
+        }
+
+        .searchbox input{
+            padding: 4px 0px;
+            border-radius: 10px;
+            border: 1px solid blue;
+        }
+
+        .searchbox button{
+            padding: 5px 8px;
+            border: none;
+            border-radius: 10px;
+            margin-left: 5px;
+            background-color: aqua;
+        }
+
+        .head{
+            background-color: aquamarine;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .head h1,p{
+            padding:10px ; 
+        }
+        .head button{
+            margin: 10px;
+            padding: 5px 10px ;   
+        }
+        .centerpart{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding:10px 0px;
+        }
+
+        .foot{
+            display: flex;
+            /* justify-content: space-evenly; */
+        }
+
+        .foot .content{
+            width: 400px;
+            height: 300px;
+            padding: 150px 0px;
+            margin-left: 20px;  
+            background-color: lightblue;
+            border: 1px solid black;
+            justify-content: space-around; 
+        }
+
+        .foot .main{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainpage">
+        <nav class="navbar">
+            <h3>Logo</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="searchbox">
+                <li><input type="search" placeholder=" Search"></li>
+                <button>Search</button>
+            </ul>
+        </nav>
+
+        <div class="head">
+            <h1>Dramatically Engage</h1>
+            <p>Objectively innovate ampowered manufactured products whereas parallel platforms</p>
+            <button>Engage Now</button>
+        </div>
+
+        <div class="centerpart">
+            <h2>Superior Collaboration Visualize Quality</h2>
+            <p>Proactively envisioned multimedia based experience and cross-media growth startegies,seamlessly visualize quality intellectual capital without superior Collaboration and idea-sharing</p>
+        </div>
+
+        <div class="foot">
+            <div class="main">
+                <div class="content">
+                    <h1>400x300</h1>
+                </div>
+                <h3>Efficiently Unleash</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde quidem accusantium exercitationem debitis praesentium deserunt, velit iste neque blanditiis.</p>
+            </div>
+
+            <div class="main">
+                <div class="content">
+                    <h1>400x300</h1>
+                </div>
+                <h3>Completely Synergize</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde quidem accusantium exercitationem debitis praesentium deserunt, velit iste neque blanditiis.</p>
+            </div>
+
+
+            <div class="main">
+                <div class="content">
+                    <h1>400x300</h1>
+                </div>
+                <h3>Dynamically Procrastinate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde quidem accusantium exercitationem debitis praesentium deserunt, velit iste neque blanditiis.</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

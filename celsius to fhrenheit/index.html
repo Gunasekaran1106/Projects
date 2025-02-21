@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>Temperature conversion</h2>
+        <div class="celsius">
+            <h3> celsius:</h3>
+            <input type="number" id="number" placeholder="Enter the Temperature">°C
+        </div>
+
+        <div>
+            <button onclick="convert()">Enter</button>
+        </div>
+
+        <div id="result" >
+
+        </div>
+    </div>
+
+    <script>
+        function convert()
+        {
+       let val=Number(document.getElementById("number").value)
+       let ans=(val*9/5)+32
+       let result=document.getElementById("result") 
+        result.innerHTML="Answer:"+ans.toFixed(2)+"°F"
+        }
+    </script>
+</body>
+</html>
